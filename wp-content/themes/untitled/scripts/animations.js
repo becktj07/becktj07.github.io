@@ -6,7 +6,7 @@ $('.button-trigger').click(function(e) {
             $('.branding-text-overlay > div:nth-of-type(2)').animate({ opacity: 0 }, 400, function(){
                 $('.branding-text-overlay > div:nth-of-type(1) > svg > g > path').css({fill: 'black', transition: '2.0s'}); 
                 $('.branding-text-overlay > div:nth-of-type(1)').animate({ top: '50%' }, 500, function(){
-                    location.href='/untitled';
+                    location.href='/';
                 });  
             });  
         });        
