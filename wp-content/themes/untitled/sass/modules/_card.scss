@@ -1,0 +1,104 @@
+﻿
+.card-wrapper {
+    padding: 60px 0;
+    background-color: #808080;
+}
+
+.card-wrapper__inner {
+    @extend .wrapper;
+    @extend .flex-container;
+}
+
+.card {
+    @include box-sizing;
+    width: 100%;
+    max-width: 326.666px;
+    margin: 0 auto 15px auto;
+    display: block;
+    background-color: #fff;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @media #{$mq-medium} {
+        width: 32.333%;
+        max-width: none;
+        display: inline-block;
+        margin: 0 1% 0 0;
+        background-color: #ffffff;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    &:hover {
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.card__section-title {
+    @extend .section-title;
+    margin-bottom: 30px;
+
+    @media #{$mq-large} {
+        margin-bottom: 50px;
+    }
+}
+
+.card__image-container {
+    width: 100%;
+    max-width: 326px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.card__title-container {
+    position: relative;
+    height: auto;
+    @extend .equalize-heights--child-container;
+}
+
+.card__title {
+    display: block;
+    font-size: 19px;
+    margin: 0 0 1em 0;
+    color: #16447a;
+    line-height: 1.4em;
+}
+
+.card__divider {
+    width: 33px;
+    border-top: 3px solid $darkNeutral;
+    margin: 0 auto;
+}
+
+.card__text-container {
+    @include box-sizing;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    @extend .equalize-heights--child-container;
+}
+
+.card__description {
+    margin: 1em 0;
+
+    @media #{$mq-large} {
+        line-height: 1.5em;
+    }
+}
+
+.card__link-container {
+    display: inline-block;
+}
+
+.card__link {
+    font-size: 17px;
+    padding: 8px;
+    font-weight: bold;
+}

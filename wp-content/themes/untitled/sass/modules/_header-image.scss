@@ -1,0 +1,19 @@
+﻿
+.header-image {
+    @extend .wrapper;
+    max-width: 1200px;
+    padding: 0;
+    position: relative;
+}
+
+.header-image__logo-overlay {
+    position: absolute;
+    @include centerer;
+    width: 220px;
+    height: 37px;
+
+    @media #{$mq-large} {
+        width: 300px;
+        height: 50px;
+    }
+}

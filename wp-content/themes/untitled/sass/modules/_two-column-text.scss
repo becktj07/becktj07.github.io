@@ -1,0 +1,27 @@
+﻿
+.two-column-description {
+    width: 100%;
+    margin: 15px auto 40px auto;
+    text-align: center;
+
+    @media #{$mq-large} {
+        text-align: left;
+        -webkit-columns: 355px 2;
+        -moz-columns: 355px 2;
+        columns: 355px 2;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        margin: 25px auto 0 auto;
+    }
+}
+
+.two-column-description--750 {
+    @extend .two-column-description;
+    max-width: 750px;
+}
+
+.two-column-description--810 {
+    @extend .two-column-description;
+    max-width: 810px;
+}

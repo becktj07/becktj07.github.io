@@ -1,0 +1,43 @@
+﻿
+.section-title {
+    font-size: $font-size-large;
+    color: $secondary;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1em;
+}
+
+.section-title--left {
+    @extend .section-title;
+
+    @media #{$mq-large} {
+        text-align: left;
+    }
+}
+
+.site-title {
+        a {
+        color: blue;
+    }
+}
+
+@font-face {
+    font-family: 'SS-Black';
+    src: url('/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: 'SS-Bold';
+    src: url('/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'SS-Regular';
+    src: url('/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'SS-Light';
+    src: url('/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf');
+  }

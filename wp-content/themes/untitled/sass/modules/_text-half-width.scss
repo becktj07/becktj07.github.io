@@ -1,0 +1,106 @@
+﻿
+.text-half-width {
+    @extend .wrapper;
+    @extend .flex-container;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media #{$mq-large} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.text-half__title {
+    @extend .section-title--left;
+    margin-top: 40px;
+}
+
+/* ========================================
+    Base Classes
+======================================== */
+
+.image-half {
+    @extend .flex-item;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media #{$mq-large} {
+        width: 45%;
+        margin: 0 5% 0 0;
+    }
+}
+
+.text-half {
+    @extend .flex-item;
+    width: 100%;
+    text-align: left;
+
+    @media #{$mq-large} {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+/* ========================================
+    Image Left - Text Right
+======================================== */
+
+.image-half--left {
+    @extend .image-half;
+}
+
+.text-half--right {
+    @extend .text-half;
+}
+
+.text-half__description--right {
+    margin: 20px 0 0 0;
+    text-align:left;
+
+    @media #{$mq-medium} {
+        text-align:center;
+        margin: 20px auto 0 auto;
+        max-width: 600px;
+    }
+
+    @media #{$mq-large} {
+        margin: 20px 0 0 0;
+        text-align:left;
+        max-width: 100%;
+    }
+}
+
+/* ========================================
+    Image Right - Text Left
+======================================== */
+
+.image-half--right {
+    @extend .image-half;
+
+    @media #{$mq-large} {
+        float: left;
+    }
+}
+
+.text-half--left {
+    @extend .text-half;
+}
+
+.text-half__description--left {
+    margin: 20px 0 0 0;
+    text-align:left;
+
+    @media #{$mq-medium} {
+        margin: 0 auto;
+        text-align:center;
+        max-width: 600px;
+    }
+
+    @media #{$mq-large} {
+        margin: 20px 0 0 0;
+        text-align: left;
+        max-width: 100%;
+    }
+}
