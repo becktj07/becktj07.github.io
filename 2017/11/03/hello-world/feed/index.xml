@@ -8,7 +8,7 @@
 <channel>
 	<title>Comments on: Hello world!</title>
 	<atom:link href="http://localhost/untitled/2017/11/03/hello-world/feed/" rel="self" type="application/rss+xml" />
-	<link>https://becktj07.github.io./2017/11/03/hello-world/</link>
+	<link>./../index.html</link>
 	<description></description>
 	<lastBuildDate>Fri, 03 Nov 2017 21:25:00 +0000</lastBuildDate>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
@@ -16,10 +16,10 @@
 	<generator>https://wordpress.org/?v=4.8.3</generator>
 	<item>
 		<title>By: A WordPress Commenter</title>
-		<link>https://becktj07.github.io./2017/11/03/hello-world/#comment-1</link>
+		<link>./../index.html#comment-1</link>
 		<dc:creator><![CDATA[A WordPress Commenter]]></dc:creator>
 		<pubDate>Fri, 03 Nov 2017 21:25:00 +0000</pubDate>
-		<guid isPermaLink="false">https://becktj07.github.io./?p=1#comment-1</guid>
+		<guid isPermaLink="false">./../../../../../index.html?p=1#comment-1</guid>
 		<description><![CDATA[Hi, this is a comment.
 To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.
 Commenter avatars come from &lt;a href=&quot;https://gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]></description>

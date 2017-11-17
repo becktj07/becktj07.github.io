@@ -10,26 +10,26 @@
 <channel>
 	<title>Untitled Creative Studio</title>
 	<atom:link href="http://localhost/untitled/feed/" rel="self" type="application/rss+xml" />
-	<link>https://becktj07.github.io.</link>
+	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Wed, 08 Nov 2017 18:33:19 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 11 Nov 2017 21:08:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.8.3</generator>
 	<item>
 		<title>Hello world!</title>
-		<link>https://becktj07.github.io./2017/11/03/hello-world/</link>
-		<comments>https://becktj07.github.io./2017/11/03/hello-world/#comments</comments>
+		<link>./../2017/11/03/hello-world/index.html</link>
+		<comments>./../2017/11/03/hello-world/index.html#comments</comments>
 		<pubDate>Fri, 03 Nov 2017 21:25:00 +0000</pubDate>
 		<dc:creator><![CDATA[tbeck]]></dc:creator>
 				<category><![CDATA[Uncategorized]]></category>
 
-		<guid isPermaLink="false">https://becktj07.github.io./?p=1</guid>
+		<guid isPermaLink="false">./../index.html?p=1</guid>
 		<description><![CDATA[Welcome to WordPress. This is your first post. Edit or delete it, then start writing!]]></description>
 				<content:encoded><![CDATA[<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://becktj07.github.io./2017/11/03/hello-world/feed/</wfw:commentRss>
+			<wfw:commentRss>./../2017/11/03/hello-world/feed/index.html</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 	</channel>

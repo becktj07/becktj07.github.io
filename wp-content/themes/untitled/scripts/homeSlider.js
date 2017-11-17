@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(window).ready(function () {
     homeSlider();
 });
 
@@ -10,8 +10,8 @@ function homeSlider() {
         autoplaySpeed: 1000,
         infinite: true,
         adaptiveheight: true,
-        //fade: true,
-        //cssEase: 'linear',
+        // fade: true,
+        // cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1
     });
