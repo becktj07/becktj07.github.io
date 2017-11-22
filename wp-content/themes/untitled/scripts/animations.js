@@ -2,9 +2,7 @@
 var windowWidth = $(window).width();
 
 $(document).ready(function() {
-    testHeight();
-
-    if (windowWidth <= 768) {
+    if (windowWidth < 768) {
         mobileAnimations();
     } else {
         desktopAnimations();
@@ -12,25 +10,20 @@ $(document).ready(function() {
 });
 
 $(window).resize(function () { 
-    if (windowWidth <= 768) {
+    if (windowWidth < 768) {
         //mobileClears();
     } else {
         //desktopClears();
     }
 });
 
-function testHeight(){
-    // var untitledTextHeight = $('.untitled-text-overlay').height();
-    // var animateHeight = untitledTextHeight / 2;
-    var animateHeight = $('.untitled-text-overlay').outerHeight();
-    var calc = 'calc(50% - "+ animateHeight +px")';
-}
-
 function desktopAnimations(){
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
-        iButtonClick.stopPropagation();
-        $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
+        $(this).removeAttr('id', 'info-button-trigger');
+        $('.desktop-button-wrapper > a').on('click',function(event) {
+            event.preventDefault();
+        });
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
             $('.untitled-text-overlay').animate({ top: '10%'}, 300);
@@ -47,12 +40,17 @@ function desktopAnimations(){
                 $('.info-flex-container').animate({ opacity: 1}, 750);
             }, 250);
         });
+        setTimeout(function(){
+            $('.desktop-button-wrapper > a').attr('id', 'x-button-trigger');
+        }, 3000);
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
         xButtonClick.preventDefault();
-        xButtonClick.stopPropagation();
-        $(this).removeAttr('id', 'x-button-trigger').attr('id', 'info-button-trigger');
+        $(this).removeAttr('id', 'x-button-trigger');
+        $('.desktop-button-wrapper > a').on('click',function(event) {
+            event.preventDefault();
+        });
         $('.sprite-x').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
             $('.info-flex-container').animate({ opacity: 0}, 750, function(){
@@ -68,16 +66,22 @@ function desktopAnimations(){
                 $('.home-slider').animate({ opacity: 1 }, 1200);
             });
         });
+        setTimeout(function(){
+            $('.desktop-button-wrapper > a').attr('id', 'info-button-trigger');
+        }, 3000);
     });
 }
 
 function mobileAnimations() {
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
-        $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
+        $(this).removeAttr('id', 'info-button-trigger');
+        $('.mobile-button-wrapper > a').on('click',function(event) {
+            event.preventDefault();
+        });
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
-            $('.untitled-text-overlay').animate({ top: '10%'}, 300);
+            $('.untitled-text-overlay').animate({ top: '13%'}, 300);
             $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.25s'});
             setTimeout(function(){
                 $('.branding-text-watermark--mobile__untitled').animate({ opacity: 1 }, 300);
@@ -99,11 +103,17 @@ function mobileAnimations() {
         setTimeout(function(){
             $('body').css('overflow-y', 'auto');
         }, 1000);
+        setTimeout(function(){
+            $('.mobile-button-wrapper > a').attr('id', 'x-button-trigger');
+        }, 3000);
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
         $("html, body").animate({ scrollTop: 0 }, "600");
-        $(this).removeAttr('id', 'x-button-trigger').attr('id', 'info-button-trigger');
+        $(this).removeAttr('id', 'x-button-trigger');
+        $('.mobile-button-wrapper > a').on('click',function(event) {
+            event.preventDefault();
+        });
         setTimeout(function(){
             $('.sprite-x').animate({ opacity: 0}, 500, function(){
                 $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
@@ -124,5 +134,8 @@ function mobileAnimations() {
                 }, 1000);
             });
         }, 700);
+        setTimeout(function(){
+            $('.mobile-button-wrapper > a').attr('id', 'info-button-trigger');
+        }, 3000);
     });
 }
