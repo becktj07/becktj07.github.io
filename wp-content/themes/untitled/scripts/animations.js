@@ -13,14 +13,14 @@ function desktopFunctions(){
         $('.home-button-wrapper > a').attr("href", "/");
     });
     $(document).on("click","#info-button-trigger",function(iButtonClick){
+        $('.information-container').css('height', 'auto');
         iButtonClick.preventDefault();
         $(this).removeAttr('id', 'info-button-trigger');
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-i').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
-            $('.information-container').css('overflow-y', 'visible');
+        $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #x-icon').animate({ opacity: 1}, 500); 
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000, 'easeOutCubic');
             }, 300);
@@ -30,21 +30,22 @@ function desktopFunctions(){
             }, 600);
             setTimeout(function(){
                 $('.branding-text-watermark__creative').animate({ opacity: 1 }, 650);
-            }, 1500);
+            }, 1100);
             setTimeout(function(){
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
-            }, 1800);
+            }, 1400);
             setTimeout(function(){
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-            }, 2000);
+            }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
-            }, 2200);
+            }, 1700);
+            $('body').css('overflow-y', 'auto');
         }); 
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'x-button-trigger');
-        }, 3000);
+        }, 2000);
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
@@ -53,8 +54,9 @@ function desktopFunctions(){
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-x').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+        $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #i-icon').animate({ opacity: 1}, 500); 
+            $('body').css('overflow-y', 'hidden');
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
@@ -76,6 +78,9 @@ function desktopFunctions(){
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'info-button-trigger');
         }, 2000);
+        setTimeout(function(){
+            $('.information-container').css('height', '0');
+        }, 2500);
     });
 }
 
@@ -90,8 +95,8 @@ function mobileFunctions() {
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-i').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
+        $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #x-icon').animate({ opacity: 1}, 500); 
             $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000);
@@ -107,6 +112,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
+                $('.info-flex-container').css("padding-top", 40);
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -126,8 +132,8 @@ function mobileFunctions() {
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-x').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+        $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #i-icon').animate({ opacity: 1}, 500); 
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);

@@ -509,9 +509,6 @@ textarea {
 body {
   font-family: "SS-Regular", Arial, sans-serif;
   overflow-y: hidden; }
-  @media only screen and (min-width: 768px) {
-    body {
-      overflow-y: auto; } }
 
 h1 {
   font-size: 14px; }
@@ -1541,7 +1538,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 
 .home-content__outer-wrapper {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 980px) {
+    .home-content__outer-wrapper {
+      min-height: 100vh; } }
 
 .home-slider__inner-wrapper {
   position: absolute;
@@ -1553,6 +1555,26 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   margin: 0 auto;
   width: calc(100% - 90px);
   z-index: 1; }
+
+.home-slider {
+  visibility: hidden;
+  z-index: 990;
+  margin: 0 auto;
+  opacity: 0; }
+
+.slick-track {
+  height: 100vh; }
+
+.slick-slide {
+  height: 70vh !important; }
+  @media only screen and (min-width: 768px) {
+    .slick-slide {
+      height: 100vh !important; } }
+  .slick-slide img {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 .untitled-text-overlay {
   position: absolute;
@@ -1624,36 +1646,13 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .branding-text-watermark__creative, .branding-text-watermark__studio {
   opacity: 0; }
 
-.home-slider {
-  visibility: hidden;
-  z-index: 990;
-  margin: 0 auto;
-  opacity: 0; }
-  @media only screen and (min-width: 1170px) {
-    .home-slider {
-      max-width: 50vw; } }
-
-.slick-slide {
-  height: 70vh !important; }
-  @media only screen and (min-width: 768px) {
-    .slick-slide {
-      height: 83vh !important; } }
-  @media only screen and (min-width: 980px) {
-    .slick-slide {
-      height: 70vh !important; } }
-  .slick-slide img {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
 .home-button-wrapper {
   z-index: 999;
   opacity: 0;
   position: fixed;
   bottom: 18px;
   width: 100%;
-  height: 45px;
+  height: 28px;
   margin: 0 auto;
   z-index: 999; }
   @media only screen and (min-width: 768px) {
@@ -1662,7 +1661,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       position: absolute;
       bottom: 20px;
       width: 100%;
-      height: 32px;
       margin: 0 auto;
       z-index: 999; } }
   @media only screen and (min-width: 980px) {
@@ -1670,54 +1668,25 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       bottom: 7vh; } }
 
 #x-button-trigger {
-  width: 34px;
-  height: 32px;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden; }
-
-#info-button-trigger {
-  width: 34px;
-  height: 32px;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.button-border {
-  width: 26px;
-  height: 26px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 2.5px solid #000;
-  overflow: hidden; }
-
-.sprite-i {
   width: 28px;
   height: 28px;
-  background-image: url(./images/button-i.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 100%; }
-  @media only screen and (min-width: 768px) {
-    .sprite-i {
-      background-position: -1px 0px; } }
-  @media only screen and (min-width: 980px) {
-    .sprite-i {
-      background-position: -1px 0px; } }
+  display: table;
+  margin: 0 auto; }
 
-.sprite-x {
-  width: 29px;
-  height: 29px;
-  background-image: url(./images/button-x.svg);
-  background-repeat: no-repeat;
-  background-position: -2px -1px;
-  background-size: contain; }
-  @media only screen and (min-width: 768px) {
-    .sprite-x {
-      background-position: -1px -1px; } }
-  @media only screen and (min-width: 980px) {
-    .sprite-x {
-      background-position: -2px 0px; } }
+#info-button-trigger {
+  width: 28px;
+  height: 28px;
+  display: table;
+  margin: 0 auto; }
+
+.x-i-button {
+  width: 27px;
+  height: 27px;
+  margin: 0 auto; }
+  .x-i-button #i-icon {
+    opacity: 1; }
+  .x-i-button #x-icon {
+    opacity: 0; }
 
 .information {
   position: relative;
@@ -1743,11 +1712,10 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .information-container {
   position: relative;
   margin: auto;
-  height: 100vh;
-  overflow-y: hidden; }
+  height: 100vh; }
   @media only screen and (min-width: 768px) {
     .information-container {
-      height: auto; } }
+      height: 0; } }
 
 .info-flex-container {
   opacity: 0;
@@ -1761,16 +1729,17 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   justify-content: space-between;
   font-family: "SS-Light", Arial, sans-serif;
   padding: 0 20px;
-  padding-top: 40px; }
+  line-height: 1.85em; }
   @media only screen and (min-width: 980px) {
     .info-flex-container {
-      padding-top: 0; } }
+      padding-top: 0;
+      line-height: 1.85em; } }
   .info-flex-container h2 {
     font-size: 1em;
     line-height: 1em;
     font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase;
@@ -1795,7 +1764,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin: 0 0 30px 0; }
     .info-flex-container .info-headings li {
       font-size: .95em;
-      line-height: 1.75em; }
+      line-height: 1em;
+      margin-bottom: .85em; }
   .info-flex-container .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1839,13 +1809,17 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     line-height: 1em;
     font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase; }
+    @media only screen and (min-width: 980px) {
+      .info-flex-container--lower h2 {
+        width: 75%; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    width: auto; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.potential-projects {
         margin-top: 15px; } }
@@ -1866,7 +1840,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin: 0 0 30px 0; }
     .info-flex-container--lower .info-headings li {
       font-size: .95em;
-      line-height: 1.75em; }
+      line-height: 1em;
+      margin-bottom: .85em; }
   .info-flex-container--lower .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;

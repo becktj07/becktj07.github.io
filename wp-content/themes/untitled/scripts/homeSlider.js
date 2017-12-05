@@ -14,13 +14,14 @@ $(window).ready(function () {
 
 function initializeHomeSlider() {
     $('.home-slider').slick({
-        autoplay: false,
+        autoplay: true,
         arrows: false,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 1500,
         infinite: true,
         useTransform: false,
         fade: true,
-        cssEase: 'none',
+        speed: 150,
+        cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1
     });
