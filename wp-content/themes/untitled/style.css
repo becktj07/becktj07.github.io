@@ -815,23 +815,23 @@ picture {
 
 @font-face {
   font-family: 'SS-Black';
-  src: url("./fonts/SourceSansPro-Black.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf"); }
 
 @font-face {
   font-family: 'SS-SemiBold';
-  src: url("./fonts/SourceSansPro-SemiBold.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
 
 @font-face {
   font-family: 'SS-Bold';
-  src: url("./fonts/SourceSansPro-Bold.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf"); }
 
 @font-face {
   font-family: 'SS-Regular';
-  src: url("./fonts/SourceSansPro-Regular.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: 'SS-Light';
-  src: url("./fonts/SourceSansPro-Light.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
 
 .header {
   max-width: none;
@@ -1571,7 +1571,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     height: 100vh; } }
 
 .slick-slide {
-  height: 90vh !important; }
+  height: 80vh !important; }
   @media only screen and (min-width: 980px) {
     .slick-slide {
       height: 100vh !important; } }
@@ -1613,7 +1613,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       top: 320px; } }
   @media only screen and (min-width: 980px) {
     .branding-text-watermark__creative {
-      top: 350px;
+      top: 345px;
       max-width: 960px; } }
   .branding-text-watermark__creative svg {
     max-width: 100%;
@@ -1717,7 +1717,10 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   height: 100vh;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 0 0 0; }
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .information-container {
+      padding-top: 40px; } }
   @media only screen and (min-width: 980px) {
     .information-container {
       width: 930px; } }
@@ -1952,7 +1955,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 @font-face {
   font-family: "slick";
   src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
