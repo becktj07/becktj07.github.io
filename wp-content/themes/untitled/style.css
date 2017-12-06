@@ -815,23 +815,23 @@ picture {
 
 @font-face {
   font-family: 'SS-Black';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf"); }
+  src: url("./fonts/SourceSansPro-Black.ttf"); }
 
 @font-face {
   font-family: 'SS-SemiBold';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
+  src: url("./fonts/SourceSansPro-SemiBold.ttf"); }
 
 @font-face {
   font-family: 'SS-Bold';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf"); }
+  src: url("./fonts/SourceSansPro-Bold.ttf"); }
 
 @font-face {
   font-family: 'SS-Regular';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
+  src: url("./fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: 'SS-Light';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
+  src: url("./fonts/SourceSansPro-Light.ttf"); }
 
 .header {
   max-width: none;
@@ -1555,10 +1555,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  top: calc(50% - 15px);
   width: 100%;
   margin: 0 auto;
   width: calc(100% - 90px);
   z-index: 1; }
+  @media only screen and (min-width: 980px) {
+    .home-slider__inner-wrapper {
+      top: 50%; } }
 
 .home-slider {
   visibility: hidden;
@@ -1716,8 +1720,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   margin: auto;
   height: 100vh;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: none; }
+  box-sizing: border-box; }
   @media only screen and (min-width: 768px) {
     .information-container {
       padding-top: 40px; } }
@@ -1955,7 +1958,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 @font-face {
   font-family: "slick";
   src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("./fonts/slick.eot#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 

@@ -88,7 +88,7 @@ function mobileFunctions() {
     $(document).ready(function() {
         $('.home-button-wrapper > a').attr("href", "#top");
         $('.information-container').css('height', '0');
-        $('.information-container').on(‘touchmove’, function(e) { e.preventDefault() });
+        $('.info-flex-container').css('display', 'none');
     });
 
     $(document).on("click","#info-button-trigger",function(iButtonClick){
@@ -102,6 +102,7 @@ function mobileFunctions() {
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000)
                 $('.information-container').css('height', '100vh');
+                $('.info-flex-container').css('display', 'flex');
             }, 300);
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
@@ -150,6 +151,7 @@ function mobileFunctions() {
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.4s'});
                 $('.untitled-text-overlay').css('z-index', 999);
                 $('body').css('overflow-y', 'hidden');
+                $('.info-flex-container').css('display', 'flex');
             }, 1500);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);
