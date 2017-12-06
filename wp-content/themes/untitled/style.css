@@ -509,6 +509,9 @@ textarea {
 body {
   font-family: "SS-Regular", Arial, sans-serif;
   overflow-y: hidden; }
+  @media only screen and (min-width: 768px) {
+    body {
+      overflow-y: auto; } }
 
 h1 {
   font-size: 14px; }
@@ -606,6 +609,7 @@ picture {
 
 .image-contain, .image-contain--full-screen-image {
   max-width: 100%;
+  max-height: 100%;
   clear: none;
   margin: 0 auto;
   text-align: center;
@@ -1568,7 +1572,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 
 .slick-slide {
   height: 70vh !important; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 980px) {
     .slick-slide {
       height: 100vh !important; } }
   .slick-slide img {
@@ -1586,9 +1590,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   z-index: 990;
   width: calc(100% - 40px);
   opacity: 0; }
-  @media only screen and (min-width: 980px) {
-    .untitled-text-overlay {
-      max-width: 960px; } }
   .untitled-text-overlay svg {
     max-width: 100%;
     display: block;
@@ -1714,9 +1715,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   position: relative;
   margin: auto;
   height: 100vh; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 980px) {
     .information-container {
-      height: 0; } }
+      width: 930px; } }
 
 .info-flex-container {
   opacity: 0;
@@ -1814,9 +1815,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase; }
-    @media only screen and (min-width: 980px) {
-      .info-flex-container--lower h2 {
-        width: 75%; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
     margin-bottom: 12px;

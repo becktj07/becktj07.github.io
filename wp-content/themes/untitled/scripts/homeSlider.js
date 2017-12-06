@@ -25,6 +25,7 @@ function initializeHomeSlider() {
         slidesToShow: 1,
         slidesToScroll: 1
     });
+    $('.slick-slide > img').css('max-height', '100%');
 }
 
 // function pauseHomeSlider(){

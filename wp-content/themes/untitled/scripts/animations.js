@@ -87,6 +87,7 @@ function desktopFunctions(){
 function mobileFunctions() {
     $(document).ready(function() {
         $('.home-button-wrapper > a').attr("href", "#top");
+        $('body').css('overflow-y', 'hidden');
     });
 
     $(document).on("click","#info-button-trigger",function(iButtonClick){
@@ -97,7 +98,6 @@ function mobileFunctions() {
         });
         $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #x-icon').animate({ opacity: 1}, 500); 
-            $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000);
             }, 300);
