@@ -25,7 +25,7 @@ function desktopFunctions(){
                 $('.home-slider').animate({ opacity: 0 }, 1000, 'easeOutCubic');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '115px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -113,7 +113,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-                $('.info-flex-container').css("padding-top", 40);
+                //$('.info-flex-container').css("padding-top", 40);
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
