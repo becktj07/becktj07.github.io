@@ -88,6 +88,7 @@ function mobileFunctions() {
     $(document).ready(function() {
         $('.home-button-wrapper > a').attr("href", "#top");
         $('.information-container').css('height', '0');
+        $('.information-container').on(‘touchmove’, function(e) { e.preventDefault() });
     });
 
     $(document).on("click","#info-button-trigger",function(iButtonClick){
@@ -113,7 +114,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-                //$('.info-flex-container').css("padding-top", 40);
+                $('.information-container').css("padding-top", 40);
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
