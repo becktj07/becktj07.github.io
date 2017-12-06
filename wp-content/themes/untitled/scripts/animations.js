@@ -87,7 +87,7 @@ function desktopFunctions(){
 function mobileFunctions() {
     $(document).ready(function() {
         $('.home-button-wrapper > a').attr("href", "#top");
-        $('body').css('overflow-y', 'hidden');
+        $('.information-container').css('height', '0');
     });
 
     $(document).on("click","#info-button-trigger",function(iButtonClick){
@@ -99,7 +99,8 @@ function mobileFunctions() {
         $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #x-icon').animate({ opacity: 1}, 500); 
             setTimeout(function(){
-                $('.home-slider').animate({ opacity: 0 }, 1000);
+                $('.home-slider').animate({ opacity: 0 }, 1000)
+                $('.information-container').css('height', '100vh');
             }, 300);
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
