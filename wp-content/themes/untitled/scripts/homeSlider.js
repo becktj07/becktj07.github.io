@@ -14,7 +14,7 @@ $(window).ready(function () {
 
 function initializeHomeSlider() {
     $('.home-slider').slick({
-        autoplay: false,
+        autoplay: true,
         arrows: false,
         autoplaySpeed: 1500,
         infinite: true,
@@ -27,7 +27,3 @@ function initializeHomeSlider() {
     });
     $('.slick-slide > img').css('max-height', '100%');
 }
-
-// function pauseHomeSlider(){
-//     $('.home-slider').slick('slickSetOption', 'autoplay', false).slick('slickPause');
-// };
