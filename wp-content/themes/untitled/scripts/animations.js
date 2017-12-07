@@ -147,15 +147,16 @@ function mobileFunctions() {
                 $('.branding-text-watermark__creative').animate({ opacity: 0 }, 650);
             }, 1000);
             setTimeout(function(){
+                $('.information-container').css("padding-top", 0);
                 $('.untitled-text-overlay').animate({ top: '50%'}, 400, 'easeOutCubic').css('z-index', 999);
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.4s'});
                 $('.untitled-text-overlay').css('z-index', 999);
-                $('body').css('overflow-y', 'hidden');
-                $('.info-flex-container').css('display', 'none');
-                $('.information-container').css('height', '0');
             }, 1500);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);
+                $('body').css('overflow-y', 'hidden');
+                $('.info-flex-container').css('display', 'none');
+                $('.information-container').css('height', '0');
             }, 1800);
         });
         setTimeout(function(){
