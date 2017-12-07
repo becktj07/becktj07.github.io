@@ -151,7 +151,8 @@ function mobileFunctions() {
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.4s'});
                 $('.untitled-text-overlay').css('z-index', 999);
                 $('body').css('overflow-y', 'hidden');
-                $('.info-flex-container').css('display', 'flex');
+                $('.info-flex-container').css('display', 'none');
+                $('.information-container').css('height', '0');
             }, 1500);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);
