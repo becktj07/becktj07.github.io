@@ -8,14 +8,8 @@ $(document).ready(function() {
 
     //prevent native touch activity like scrolling
     if ($('.home-button-wrapper > a').hasClass('information-closed')){
-        $('html').on('touchstart touchmove', function(e){
-            e.preventDefault(); 
-
-            $('html').css({
-                'max-width' : '100%',
-                'max-height' : '100%',
-                'overflow' : 'hidden'
-            });
+        $('html').on('touchmove', function(lock){
+            lock.preventDefault();
         });
     }
 
@@ -39,6 +33,7 @@ $(window).resize(function() {
             });
         }
         else {
+            $('.info-flex-container').css('padding-top','40px');
             $('.information-container').css('height', '100vh');
             $('.untitled-text-overlay').css({
                 'top' : '35px',
@@ -59,6 +54,12 @@ $(window).resize(function() {
 
 function desktopFunctions(){
     $(document).on("click","#info-button-trigger",function(iButtonClick){
+
+        $('html').on('touchmove', function(lock){
+            return true;
+            $('body').css('overflow-y', 'scroll');
+        });
+
         iButtonClick.preventDefault();
         $(this).removeAttr('id', 'info-button-trigger');
         $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');
