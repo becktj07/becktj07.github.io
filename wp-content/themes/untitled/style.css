@@ -1738,11 +1738,15 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 2; }
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-headings {
-        -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+        -ms-flex-preferred-size: 29%;
+        flex-basis: 29%;
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1; } }
+    @media only screen and (min-width: 980px) {
+      .info-flex-container .info-headings {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%; } }
     .info-flex-container .info-headings ul {
       list-style: none;
       padding: 0;
@@ -1760,8 +1764,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-description {
         padding-top: 0;
-        -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+        -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2; } }
@@ -1789,7 +1793,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: "SS-Light", Arial, sans-serif;
-  padding-top: 0; }
+  padding-top: 0 !important; }
   .info-flex-container--lower h2.content-development-management {
     font-size: 1em;
     line-height: 1em;
@@ -1828,6 +1832,10 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 1; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-headings {
+        -ms-flex-preferred-size: 29%;
+        flex-basis: 29%; } }
+    @media only screen and (min-width: 980px) {
+      .info-flex-container--lower .info-headings {
         -ms-flex-preferred-size: 25%;
         flex-basis: 25%; } }
     .info-flex-container--lower .info-headings ul {
@@ -1848,8 +1856,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     padding-top: 0; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-description {
-        -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+        -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
         text-align: left; } }
     @media only screen and (min-width: 980px) {
       .info-flex-container--lower .info-description {

@@ -6,10 +6,16 @@ $(document).ready(function() {
     $('body').css('overflow-y', 'hidden');
     $('.home-button-wrapper > a').addClass('information-closed');
 
+    //prevent native touch activity like scrolling
     if ($('.home-button-wrapper > a').hasClass('information-closed')){
-        $('html, body').on('touchstart touchmove', function(e){ 
-            //prevent native touch activity like scrolling
+        $('html').on('touchstart touchmove', function(e){
             e.preventDefault(); 
+
+            $('html').css({
+                'max-width' : '100%',
+                'max-height' : '100%',
+                'overflow' : 'hidden'
+            });
         });
     }
 
@@ -25,6 +31,7 @@ $(window).resize(function() {
     if ($('.home-button-wrapper > a').hasClass('information-open')){
         if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
             $('.information-container').css('height', 'auto');
+            $('.info-flex-container').css('padding-top','0px');
             $('.untitled-text-overlay').css({
                 'top' : '75px',
                 'left' : '50%',
