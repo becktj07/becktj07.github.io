@@ -11267,10 +11267,10 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       margin-left: 62.5%; }
   .mdl-cell--6-offset,
   .mdl-cell--6-offset-tablet.mdl-cell--6-offset-tablet {
-    margin-left: calc(75% + 8px); }
+    margin-left: calc(50% + 8px); }
     .mdl-grid.mdl-grid--no-spacing > .mdl-cell--6-offset, .mdl-grid.mdl-grid--no-spacing >
     .mdl-cell--6-offset-tablet.mdl-cell--6-offset-tablet {
-      margin-left: 75%; }
+      margin-left: 50%; }
   .mdl-cell--7-offset,
   .mdl-cell--7-offset-tablet.mdl-cell--7-offset-tablet {
     margin-left: calc(87.5% + 8px); }
