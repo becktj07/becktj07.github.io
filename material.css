@@ -11195,10 +11195,10 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       width: 62.5%; }
   .mdl-cell--6-col,
   .mdl-cell--6-col-tablet.mdl-cell--6-col-tablet {
-    width: calc(75% - 16px); }
+    width: calc(50% - 16px); }
     .mdl-grid--no-spacing > .mdl-cell--6-col, .mdl-grid--no-spacing >
     .mdl-cell--6-col-tablet.mdl-cell--6-col-tablet {
-      width: 75%; }
+      width: 50%; }
   .mdl-cell--7-col,
   .mdl-cell--7-col-tablet.mdl-cell--7-col-tablet {
     width: calc(87.5% - 16px); }
